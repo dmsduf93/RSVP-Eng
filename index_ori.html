@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form Update</title>
+    <style>
+        /* Apply styles to center-align content */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('background.png'); /* Path to your background image */
+            background-size: cover; /* Make sure the image covers the whole screen */
+            background-position: center center; /* Center the image */
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea, button {
+            width: 300px; /* Set a fixed width */
+            padding: 15px; /* Add more padding for a larger typing area */
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 150px; /* Increase the height for a larger message box */
+            resize: vertical; /* Allow the user to resize the textarea */
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Contact Form update</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="number">Phone Number:</label>
+            <input type="text" id="number" name="number" required><br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        emailjs.init('zNlaqaX53MJFOmei0'); // Replace YOUR_USER_ID with your EmailJS user ID
+
+        // Handle form submission
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            // Get form values
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const number = formData.get('number');
+            const message = formData.get('message');
+
+            // Send email using EmailJS
+            emailjs.sendForm('service_4n7zide', 'template_8new6yf', this)
+                .then(function (response) {
+                    console.log('Success:', response);
+                    alert('Your message has been sent!');
+                }, function (error) {
+                    console.error('Error:', error);
+                    alert('There was an error sending your message.');
+                });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+      <meta name="description" content="라미, 은열의 결혼식 모바일 청첩장입니다.">
+      <meta name="author" content="Pachung">
+      <meta name="email" content="dmsduf93@naver.com">
+      <meta property="og:url" content="https://dmsduf93.github.io/Wedding-invitation-page" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Rahmi❤️EunYeol, 결혼합니다." />
+      <meta property="og:description" content="두 사람의 결혼을 축하해 주세요." />
+      <meta property="og:image" content="assets/img/couple.png" />
+      <meta property="og:site_name" content="Rahmi❤️EunYeol, 결혼합니다." />
+      <title>Rahmi❤️EunYeol, 결혼합니다.</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+      
+      <style>
+        body, html {
+          height: 100%;
+          margin: 0;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #f0f8ff;
+        }
+
+        .background-container {
+          position: relative;
+          width: 80vw;
+          height: 100vh;
+          background-image: url('main_background.png');
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .falling-flower {
+          position: absolute;
+          top: -10px;
+          animation: fall 10s infinite linear;
+        }
+
+        @keyframes fall {
+          0% {
+            top: -10px;
+            transform: rotate(0deg);
+          }
+          100% {
+            top: 100%;
+            transform: rotate(360deg);
+          }
+        }
+
+
+        /* Contact form styles */
+
+        .contact-form-container button:hover {
+          background-color: #FF1493;
+        }
+
+         
+            /* Media query for mobile (up to 1023px) */
+         @media (max-width: 1023px) {
+           .title-container{
+             margin-top: 90px;
+             margin-bottom: 2px;
+             font-family: 'Noto Serif KR', serif;
+             text-align: center;
+           }
+            .text-container {
+             margin-bottom: 2px;
+             font-family: 'Noto Serif KR', serif;
+             text-align: center;
+           }
+           .title-container {
+             font-size: 20px;
+           }
+   
+           .text-container {
+             font-size: 15px;
+           }
+           .contact-form-container {
+             position: relative;
+             font-size: 15px;
+             margin-top: 4px;
+             background-color: rgba(255, 255, 255, 0.8);
+             padding: 10px;
+             border-radius: 5px;
+             width: 200px;
+             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+           }
+           .contact-form-container label {
+             display: block;
+             margin-bottom: 4px;
+             font-weight: bold;
+           }
+   
+           .contact-form-container input, .contact-form-container textarea {
+             width: 100%;
+             padding: 5px;
+             margin-bottom: 6px;
+             border: 1px solid #ccc;
+             border-radius: 3px;
+           }
+   
+           .contact-form-container button {
+             width: 100%;
+             padding: 5px;
+             background-color: #FF69B4;
+             color: white;
+             border: none;
+             border-radius: 3px;
+             font-weight: bold;
+           }
+         }
+         
+         /* Optional: Adjust text sizes on larger screens if needed */
+         @media (min-width: 1024px) {
+           .title-container {
+             margin-top: 90px;
+             margin-bottom: 5px;
+             font-family: 'Noto Serif KR', serif;
+             text-align: center;
+           }
+            .text-container {
+             margin-bottom: 5px;
+             font-family: 'Noto Serif KR', serif;
+             text-align: center;
+           }
+           .title-container {
+             font-size: 25px;
+           }
+   
+           .text-container {
+             font-size: 20px;
+           }
+           .contact-form-container {
+             position: relative;
+             font-size: 20px;
+             margin-top: 20px;
+             background-color: rgba(255, 255, 255, 0.8);
+             padding: 20px;
+             border-radius: 10px;
+             width: 350px;
+             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+           }
+           .contact-form-container label {
+             display: block;
+             margin-bottom: 8px;
+             font-weight: bold;
+           }
+   
+           .contact-form-container input, .contact-form-container textarea {
+             width: 100%;
+             padding: 10px;
+             margin-bottom: 12px;
+             border: 1px solid #ccc;
+             border-radius: 5px;
+           }
+   
+           .contact-form-container button {
+             width: 100%;
+             padding: 10px;
+             background-color: #FF69B4;
+             color: white;
+             border: none;
+             border-radius: 5px;
+             font-weight: bold;
+           }
+         }
+      </style>
+   </head>
+
+   <body>
+      <div class="background-container">
+         <div class="title-container">
+            <p>
+               참석 여부 전달 안내
+            </p>
+         </div>
+         <div class="text-container">
+            <p>
+               특별한 날 축하의 마음으로 참석해주시는<br />
+               모든 분들을 더욱 귀하게 모실 수 있도록<br />
+               아래 기입란을 작성하여 신랑 • 신부에게<br />
+               참석여부를 전달 부탁드립니다.<br />
+               참석하시는 모든 분의 성함을 기입 부탁드립니다.<br />
+            </p>
+         </div>
+
+         <!-- Contact Form Section -->
+         <div class="contact-form-container">
+            <form id="contact-form">
+                <label for="name">성함:</label>
+                <input type="text" id="name" name="name" required><br>
+            
+                <label for="number">인원:</label>
+                <input type="text" id="number" name="number" required><br>
+            
+                <label for="message">축하 메시지:</label>
+                <textarea id="message" name="message" required></textarea><br>
+            
+                <button type="submit">Submit</button>
+            </form>
+         </div>
+      </div>
+
+      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+      <script>
+        // Initialize EmailJS
+        emailjs.init('zNlaqaX53MJFOmei0'); // Replace with your EmailJS user ID
+
+        // Handle form submission
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            // Send email using EmailJS
+            emailjs.sendForm('service_4n7zide', 'template_8new6yf', this)
+                .then(function (response) {
+                    console.log('Success:', response);
+                    alert('제출이 완료되었습니다.');
+                }, function (error) {
+                    console.error('Error:', error);
+                    alert('제출에 실패하였습니다.\n계속해서 제출에 실패할 경우 관리자에게 알려주세요.');
+                });
+        });
+      </script>
+      
+      <script>
+        // Create falling flowers
+        const flowerImages = [
+          "flower.png", // Flower icon image URL
+        ];
+
+        function createFallingFlower() {
+          const flower = document.createElement("img");
+          flower.src = flowerImages[0];
+          flower.classList.add("falling-flower");
+
+          // Set random size for each flower (for variety)
+          const flowerSize = Math.random() * 5 + 8; // Random size between 10px and 40px
+          flower.style.width = `${flowerSize}px`; 
+          flower.style.height = `${flowerSize}px`;
+
+          // Get the width of the container and randomize the flower's horizontal position inside it
+          const container = document.querySelector('.background-container');
+          const containerWidth = container.offsetWidth;
+          flower.style.left = `${Math.random() * containerWidth}px`;  // Random horizontal position within container
+
+          // Set a random speed for each flower's falling animation
+          flower.style.animationDuration = `${Math.random() * 5 + 5}s`;  // Random speed between 5s and 10s
+
+          container.appendChild(flower);
+
+          // Remove the flower when it has finished falling
+          flower.addEventListener("animationiteration", () => {
+            flower.remove();
+          });
+        }
+
+        // Create flowers at regular intervals
+        setInterval(createFallingFlower, 200);
+      </script>
+   </body>
+</html>
