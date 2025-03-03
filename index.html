@@ -234,20 +234,6 @@
                   alert('Submission failed.\nPlease contact the administrator if it keeps failing.');
               });
       });
-        // Handle form submission
-        document.getElementById('contact-form').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the form from submitting the traditional way
-
-            // Send email using EmailJS
-            emailjs.sendForm('service_4n7zide', 'template_8new6yf', this)
-                .then(function (response) {
-                    console.log('Success:', response);
-                    alert('Submission Completed.');
-                }, function (error) {
-                    console.error('Error:', error);
-                    alert('Failed to submit.\nPlease contact the administrator if it keeps failing.');
-                });
-        });
       </script>
       
       <script>
