@@ -200,7 +200,7 @@
          </div>
          <div class="text-container">
             <p>
-               Please kindly send in your RSVP<br />
+               Please kindly send your RSVP<br />
                by April 5th<br />
                Thank you!<br />
             </p>
@@ -209,7 +209,7 @@
          <!-- Contact Form Section -->
          <div class="contact-form-container">
             <form id="contact-form">
-                <label for="name">Names of all individuals:</label>
+                <label for="name">Names of all individuals attending:</label>
                 <input type="text" id="name" name="name" required><br>
             
                 <label for="number">Number of individuals attending:</label>
@@ -227,7 +227,7 @@
       <script>
         // Initialize EmailJS
         emailjs.init('zNlaqaX53MJFOmei0'); // Replace with your EmailJS user ID
-         
+
       // Handle form submission
       document.getElementById('contact-form').addEventListener('submit', function (event) {
           event.preventDefault(); // Prevent the form from submitting the traditional way
@@ -236,11 +236,11 @@
           emailjs.sendForm('service_4n7zide', 'template_8new6yf', this)
               .then(function (response) {
                   console.log('Success:', response);
-                  alert('Submission Completed.');
+                  alert('Submitted!.');
                   location.reload(); // Refresh the page after success
               }, function (error) {
                   console.error('Error:', error);
-                  alert('Submission failed.\nPlease contact the administrator if it keeps failing.');
+                  alert('Submit failed.\nPlease contact administrator.');
               });
       });
       </script>
